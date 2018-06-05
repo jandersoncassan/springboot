@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{layouts/layout}">
+<html xmlns:layout="http://www.w3.org/1999/xhtml" 
+	  xmlns:th="http://www.thymeleaf.org" 
+	  layout:decorate="~{layouts/layout}">
     <head>
         <title>Lista</title>
     </head>
     <body>
         <!-- <div layout:fragment="sidebar"></div> -->
-        <div layout:fragment="conteudo">@Lista - Alura</div>
+        <div layout:fragment="conteudo">
+        <span th:text="${listaConvidados}"></span>
+        	<table class="table">
+        		
+        	</table>
+        </div>
     </body>
 </html>
