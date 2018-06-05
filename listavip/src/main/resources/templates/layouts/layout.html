@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">Alura</title>
+<div th:replace="fragments/head_tag">This header content is going to be replaced.</div>
+</head>
+<body>
+	<div class="container text-center">
+		<div th:insert="fragments/body_header"></div>
+		<div class="row">
+<!-- 		<div class="col-xs-12 col-sm-12 col-md-2" layout:fragment="sidebar">
+				<h1>This is the layout's sidebar</h1>
+				<p>This content will be replaced if the page using the layout
+					also defines a layout:fragment="sidebar" segment.</p>
+			</div>
+			
+ -->		<div class="col-xs-12 col-sm-12 col-md-12" layout:fragment="conteudo">
+				<h1>This is the Layout's main section</h1>
+				<p>This content will be replaced if the page using the layout
+					also defines a layout:fragment="content" segment.</p>
+			</div>
+		</div>
+	</div>
+	<footer th:insert="fragments/body_footer"> This content will
+		remain, but other content will be inserted after it. </footer>
+</body>
+</html>
